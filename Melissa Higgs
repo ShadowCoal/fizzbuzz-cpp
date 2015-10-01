@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int mult3 = 0.0;
+    int mult5 = 0.0;
+    for (int x = 1; x <101; x +=1)
+    {
+        mult3 =x;
+        mult5=x;
+
+        mult3 = mult3 % 3;
+        mult5 = mult5 % 5;
+        if (mult3 == 0)
+        {
+            cout << " Fizz";
+            if (mult5 == 0)
+                cout << "Buzz," << endl;
+            else
+                cout << ",";
+        }
+        else if (mult5==0)
+            cout << " Buzz," << endl;
+        else
+            cout << " " << x << ",";
+        mult3 = 0;
+        mult5 =0;
+    }
+    return 0;
+}
